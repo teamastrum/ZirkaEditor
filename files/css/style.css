@@ -75,6 +75,12 @@ ul.startMenu li {
     border-radius: 20px;
 }
 
+.btn-xs {
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
 .btn-sm {
     padding: 6px 20px;
     border-radius: 20px;

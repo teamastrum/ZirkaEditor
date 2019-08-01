@@ -38,7 +38,7 @@ function createWindow() {
     }));
 
     // Open Dev Tools
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
 
     // If window is ready to show
     win.on('ready-to-show', () => {
@@ -72,7 +72,11 @@ function createWindow() {
     }));
 
     // Open Dev Tools
-    //win2.webContents.openDevTools();
+    // win2.webContents.openDevTools();
+
+    win2.on('show', () => {
+        win2.maximize();
+    });
 
     // If window is closed
     win2.on('closed', () => {
