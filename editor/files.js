@@ -16,11 +16,6 @@ exports.file = class {
 }
 
 exports.saveFile = (filePath) => {
-    // If filePath is null (New File) the open save dialog.
-    if (filePath == null) {
-        filePath = exports.saveAsFile();
-    }
-
     // Check if file is undefined/Save As dialog closed
     if (filePath == undefined) {
         return false;
