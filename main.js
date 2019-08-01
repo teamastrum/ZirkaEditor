@@ -61,11 +61,18 @@ function setMenuBar() {
                     accelerator: 'CmdOrCtrl + S'
                 },
                 {
+                    label: 'Save As',
+                    click: () => {
+                        files.saveAsFile();
+                    },
+                    accelerator: 'CmdOrCtrl + Shift + S'
+                },
+                {
                     label: 'Open',
                     click: () => {
                         editor.fileDialog();
                     },
-                    accelerator: 'CmdOrCtrl + N'
+                    accelerator: 'CmdOrCtrl + O'
                 },
                 { type: 'separator' },
                 { role: 'quit' }
