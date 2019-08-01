@@ -20,6 +20,10 @@ exports.saveFile = (filePath) => {
         filePath = exports.saveAsFile();
     }
 
+    if (filePath == undefined) {
+        return false;
+    }
+
     // Read the file at filePath
     var file = fs.readFile(filePath, 'utf8', (err, contents) => {
         if (err != null || err != undefined) { // If there's any errors, log em
