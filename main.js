@@ -72,7 +72,7 @@ function setMenuBar() {
                 {
                     label: 'Save',
                     click: () => {
-                        files.saveFile(editor.getCurrentFile().filePath);
+                        files.saveFile(editor.editor.getCurrentlyOpenedFile().filePath);
                     },
                     accelerator: 'CmdOrCtrl + S'
                 },
@@ -86,7 +86,7 @@ function setMenuBar() {
                 {
                     label: 'Open',
                     click: () => {
-                        editor.fileDialog();
+                        files.open();
                     },
                     accelerator: 'CmdOrCtrl + O'
                 },

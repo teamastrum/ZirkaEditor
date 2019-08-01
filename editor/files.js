@@ -48,7 +48,7 @@ exports.saveFile = (filePath) => {
             return false;
         }
         // Tell the editor to update the UI (fileSaved is like that white dot in vscode next to the filename)
-        editor.updateCurrentFileData('fileSaved', 'true');
+        editor.editor.updateCurrentFileData('fileSaved', 'true');
     } else {
         return false;
     }
@@ -102,4 +102,8 @@ exports.checkFType = (filePath) => {
         default:
             return fileExtension;
     }
+}
+
+exports.open = () => {
+    // TODO: Add implementation
 }
