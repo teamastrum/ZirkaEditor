@@ -1,41 +1,44 @@
 const { dialog } = require('electron');
 const files = require('./files');
-currentFiles = new Set();
-currentFile = null;
 
-exports.showError = (title, msg) => {
-    dialog.showErrorBox(title, msg);
-    return true;
+// The main editor class.
+exports.editor = class {
+    constructor () {
+        this.openedFiles = [];
+        this.currentFile = new files.file(null);
+    }
+
+    getAllOpenFiles() {
+        // Gets all currently opened files.
+        return this.openedFiles;
+    }
+
+    getAllProjectFiles() {
+        // TODO: Add implementation
+        return [];
+    }
+
+    getCurrentlyOpenedFile() {
+        // TODO: Add file implementation in editor (After editor GUI is done and file editor is completed.)
+        var file = new files.file('yes.txt', 'yes');
+        return file;
+    }
+
+    updateFileData(file, data, value) {
+        // Update file data (GUI).
+        // TODO: Add implementation.
+        return true;
+    }
+    updateCurrentFileData(data, value) {
+        // Go to files.js for refrence.
+        // This will update the GUI of the editor in the current file.
+        this.updateFileData(this.getCurrentFile(), data, value);
+        return true;
+    }
 }
 
-exports.showDialog = (msg) => {
-    dialog.showMessageBoxSync("Bruh moment", {title:msg});
-}
-
-exports.getCurrentFile = () => {
-    return currentFile;
-}
-
-exports.closeFile = (filePath) => {
-    
-}
-
-exports.updateCurrentFileData = (data, value) => {
-	dialog.showMessageBoxSync("Bruh moment", {title: "bruh"})
-	files.saveFile(currentFile.filePath)
-}
-
-exports.openFile = (filePath) => {
-    this.showError("Sucess", "Opening file: " + filePath);
-    currentFile = new files.file(filePath);
-}
-
-exports.fileDialog = () => {
-    //Ask for file select :)
-    dialog.showOpenDialog("Open File", {
-        properties: ['openFile']
-    }).then(res => {
-        this.openFile(res.filePaths[0]);
-    })
+exports.showError = (msg) => {
+    // Show Error dialog
+    dialog.showErrorBox("Bruh moment", msg);
     return true;
 }
