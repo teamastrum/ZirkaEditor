@@ -25,17 +25,3 @@ html, body {
     background-color: #232323;
     color: #ccc;
 }
-
-.left-yes-1babasdjas {
-    width: calc(100%-30%);
-    height: calc(100% - 40px);
-    margin: 0;
-    display: inline-block;
-}
-
-.right-yes-hdsgfsdfjg {
-    width: calc(100%-70%);
-    height: calc(100% - 40px);
-    margin: 0;
-    display: inline-block;
-}

@@ -45,7 +45,7 @@ app.on('ready', () => {
     createWindow();
 
     Menu.setApplicationMenu(null);
-    //setMenuBar();
+    setMenuBar();
 });
 
 function setMenuBar() {
@@ -59,6 +59,13 @@ function setMenuBar() {
                         files.saveFile(editor.getCurrentFile().filePath);
                     },
                     accelerator: 'CmdOrCtrl + S'
+                },
+                {
+                    label: 'Save As',
+                    click: () => {
+                        files.saveAsFile();
+                    },
+                    accelerator: 'CmdOrCtrl + Shift + S'
                 },
                 { type: 'separator' },
                 { role: 'quit' }
