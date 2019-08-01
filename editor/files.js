@@ -2,23 +2,24 @@ const fs = require('fs');
 const editor = require('./editor.js');
 
 exports.file = class {
-    constructor (filePath, data) {
+    constructor (filePath) {
         this.filePath = filePath;
-        this.data = data;
+        this.data = null;
+        this.info = fs.statSync(filePath);
     }
+
+    read() {
+        return fs.readFileSync(this.filePath);
+    }
+
+
 }
 
 exports.saveFile = (filePath) => {
     // if (exports.checkFType(filePath)) {
     //     return true;
     // }
-    var file = fs.readFile('DATA', 'utf8', (err, contents) => {
-        if (err != null) {
-            return false;
-        } else {
-            return contents;
-        }
-    });
+    var file = fs.existsSync(filePath); //Check if file exists?
     
     if (file != false) {
         // if (editor.getCurrentFile().read() == file && editor.getCurrentFile().filePath == filePath) {
