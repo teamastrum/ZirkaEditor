@@ -19,8 +19,8 @@ const files = require('./editor/files');
 function createWindow() {
     // Create a new BrowserWindow
     let win = new BrowserWindow({
-        width: 1920,
-        height: 1080,
+        width: 500,
+        height: 300,
         webPreferences: {
             show: false,
             nodeIntegration: true
