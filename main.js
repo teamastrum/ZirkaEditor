@@ -33,12 +33,7 @@ function createWindow() {
         slashes: true
     }));
 
-<<<<<<< HEAD
     //win.webContents.openDevTools();
-=======
-    // Open Dev Tools 
-    win.webContents.openDevTools();
->>>>>>> 6270129294ecc7d1fb0ec6d30801e9573bcce3a4
 
     win.on('ready-to-show', () => {
         // If is ready, show the app.

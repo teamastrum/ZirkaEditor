@@ -23,24 +23,7 @@ exports.saveFile = (filePath) => {
     if (filePath == null) {
         filePath = exports.saveAsFile();
     }
-<<<<<<< HEAD
-
-    if (filePath == undefined) {
-        return false;
-    }
-
-    // Read the file at filePath
-    var file = fs.readFile(filePath, 'utf8', (err, contents) => {
-        if (err != null || err != undefined) { // If there's any errors, log em
-            console.log(err);
-            return false;
-        } else {
-            return contents;
-        }
-    });
-=======
     var file = fs.existsSync(filePath); //Check if file exists?
->>>>>>> 65babfac6a6bd4a455e3c7745c376fae7448ba44
     
     if (file != false) {
         try {
