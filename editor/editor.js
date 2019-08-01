@@ -1,40 +1,33 @@
 const { dialog } = require('electron');
 const files = require('./files');
 
-// The main editor class.
-exports.editor = class {
-    constructor () {
-        this.openedFiles = [];
-        this.currentFile = new files.file(null);
-    }
+exports.getAllOpenedFiles = () => {
+    // Gets all currently opened files.
+    // TODO: Add implementation
+    return [];
+}
 
-    getAllOpenFiles() {
-        // Gets all currently opened files.
-        return this.openedFiles;
-    }
+exports.getAllProjectFiles = () => {
+    // TODO: Add implementation
+    return [];
+}
 
-    getAllProjectFiles() {
-        // TODO: Add implementation
-        return [];
-    }
+exports.getCurrentlyOpenedFile = () => {
+    // TODO: Add file implementation in editor (After editor GUI is done and file editor is completed.)
+    var file = new files.file('./yes.txt');
+    return file;
+}
 
-    getCurrentlyOpenedFile() {
-        // TODO: Add file implementation in editor (After editor GUI is done and file editor is completed.)
-        var file = new files.file('yes.txt', 'yes');
-        return file;
-    }
-
-    updateFileData(file, data, value) {
-        // Update file data (GUI).
-        // TODO: Add implementation.
-        return true;
-    }
-    updateCurrentFileData(data, value) {
-        // Go to files.js for refrence.
-        // This will update the GUI of the editor in the current file.
-        this.updateFileData(this.getCurrentFile(), data, value);
-        return true;
-    }
+exports.updateFileData = (file, data, value) => {
+    // Update file data (GUI).
+    // TODO: Add implementation.
+    return true;
+}
+exports.updateCurrentFileData = (data, value) => {
+    // Go to files.js for refrence.
+    // This will update the GUI of the editor in the current file.
+    exports.updateFileData(exports.getCurrentlyOpenedFile(), data, value);
+    return true;
 }
 
 exports.showError = (msg) => {

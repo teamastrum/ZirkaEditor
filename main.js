@@ -72,7 +72,7 @@ function setMenuBar() {
                 {
                     label: 'Save',
                     click: () => {
-                        files.saveFile(editor.editor.getCurrentlyOpenedFile().filePath);
+                        files.saveFile(editor.getCurrentlyOpenedFile().filePath);
                     },
                     accelerator: 'CmdOrCtrl + S'
                 },
