@@ -4,14 +4,15 @@ const url = require('url');
 const path = require('path');
 const Menu = electron.Menu;
 
-const editor = require('editor/editor.js');
-const files = require('editor/files.js');
+const editor = require('./editor/editor');
+const files = require('./editor/files');
 
 function createWindow() {
     let win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 600,
+        height: 400,
         webPreferences: {
+            show: false,
             nodeIntegration: true
         }
     });
@@ -22,7 +23,11 @@ function createWindow() {
         slashes: true
     }));
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
+
+    win.on('ready-to-show', () => {
+        win.show();
+    });
 
     win.on('closed', () => {
         win = null;
@@ -33,6 +38,11 @@ function createWindow() {
 app.on('ready', () => {
     createWindow();
 
+    Menu.setApplicationMenu(null);
+    setMenuBar();
+});
+
+function setMenuBar() {
     const template = [
         {
             label: 'File',
@@ -40,8 +50,9 @@ app.on('ready', () => {
                 {
                     label: 'Save',
                     click: () => {
-                        files.saveFile(editor.getCurrentFile());
-                    }
+                        files.saveFile(editor.getCurrentFile().filePath);
+                    },
+                    accelerator: 'CmdOrCtrl + S'
                 },
                 { type: 'separator' },
                 { role: 'quit' }
@@ -65,7 +76,8 @@ app.on('ready', () => {
 
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
-});
+
+}
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
