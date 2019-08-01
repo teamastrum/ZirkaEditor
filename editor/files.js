@@ -3,22 +3,27 @@ const editor = require('./editor.js');
 const { dialog, app } = require('electron');
 
 exports.file = class {
-    constructor (filePath, data) {
+    constructor (filePath) {
         this.filePath = filePath;
-        this.data = data;
+        this.data = null;
+        this.info = fs.statSync(filePath);
     }
+
     read() {
-        return this.data;
+        return fs.readFileSync(this.filePath);
     }
+
+
 }
 
 exports.saveFile = (filePath) => {
     // if (exports.checkFType(filePath)) {
     //     return true;
     // }
-    if (filePath == 'newFile') {
+    if (filePath == null) {
         filePath = exports.saveAsFile();
     }
+<<<<<<< HEAD
 
     if (filePath == undefined) {
         return false;
@@ -33,46 +38,39 @@ exports.saveFile = (filePath) => {
             return contents;
         }
     });
+=======
+    var file = fs.existsSync(filePath); //Check if file exists?
+>>>>>>> 65babfac6a6bd4a455e3c7745c376fae7448ba44
     
-    if (file != false) { // If there's a problem with the file, return false
-        // Otherwise, write to the filePath the new data.
+    if (file != false) {
         try {
             fs.writeFileSync(filePath, editor.getCurrentFile().data);
         } catch (err) {
-            // If any error occures, show error dialog and print error to command line
             editor.showError('Couldn\'t save file. (File write error)');
             console.error(err);
             return false;
-        }
-        // You know how like editors have this dot that tells u if u saved or not? This is it.
+        }    
+        console.log('yes');
         editor.updateCurrentFileData('fileSaved', 'true');
     } else {
         return false;
     }
-    // If no errors were made, return true
     return true;
 }
 
 exports.saveAsFile = () => {
-    // Define options for our save dialog
     const options = {
         defaultPath: require('os').homedir(),
     };
-
-    // Show the save dialog and store the file path in a variable
     var filePath = dialog.showSaveDialogSync(null, options);
-    
     try {
-        // If file already exists, just overwrite it
         if (fs.existsSync(filePath)) {
             return exports.saveFile(filePath);
         } else {
-            // If not, create a new file and then write to it.
             fs.closeSync(fs.openSync(filePath, 'w'));
             return exports.saveFile(filePath);
         }
     } catch (err) {
-        // If any errors were made, log them into the console and show error dialog.
         console.error(err);
         editor.showError("Couldn't save file. (fs.existsSync threw error)");
     }

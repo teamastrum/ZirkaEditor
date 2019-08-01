@@ -18,8 +18,8 @@ const files = require('./editor/files');
 function createWindow() {
     // Creates window
     let win = new BrowserWindow({
-        width: 600,
-        height: 400,
+        width: 1920,
+        height: 1080,
         webPreferences: {
             show: false,
             nodeIntegration: true
@@ -33,8 +33,12 @@ function createWindow() {
         slashes: true
     }));
 
+<<<<<<< HEAD
+    //win.webContents.openDevTools();
+=======
     // Open Dev Tools 
     win.webContents.openDevTools();
+>>>>>>> 6270129294ecc7d1fb0ec6d30801e9573bcce3a4
 
     win.on('ready-to-show', () => {
         // If is ready, show the app.
@@ -78,6 +82,13 @@ function setMenuBar() {
                     },
                     accelerator: 'CmdOrCtrl + Shift + S'
                 },
+                {
+                    label: 'Open',
+                    click: () => {
+                        editor.fileDialog();
+                    },
+                    accelerator: 'CmdOrCtrl + O'
+                },
                 { type: 'separator' },
                 { role: 'quit' }
             ]
@@ -119,3 +130,7 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
+// app.on('open-file', (filePath) => {
+//    editor.openFile(filePath);
+// });
