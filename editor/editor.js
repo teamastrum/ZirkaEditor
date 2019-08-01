@@ -10,6 +10,7 @@ exports.getCurrentFile = () => {
     var file = new files.file('yes.txt', 'yes');
     return file;
 }
+
 exports.updateCurrentFileData = (data, value) => {
 
 }

@@ -1,4 +1,41 @@
-body {
-    background: #232323;
-    color: #bbb;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    position: absolute;
+    width: calc(100% - 40px);
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.content h3 {
+    margin-top: 0;
+    font-weight: 300;
+}
+
+.bg-dark {
+    background-color: #232323;
+    color: #ccc;
+}
+
+.left-yes-1babasdjas {
+    width: calc(100%-30%);
+    height: calc(100% - 40px);
+    margin: 0;
+    display: inline-block;
+}
+
+.right-yes-hdsgfsdfjg {
+    width: calc(100%-70%);
+    height: calc(100% - 40px);
+    margin: 0;
+    display: inline-block;
 }

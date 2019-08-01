@@ -1,4 +1,10 @@
 const electron = require('electron');
+
+// Enable live reload for all the files inside your project directory
+require('electron-reload')(__dirname, {
+    electron: require(`${__dirname}/node_modules/electron`)
+});
+
 const { app, BrowserWindow } = electron;
 const url = require('url');
 const path = require('path');
@@ -23,7 +29,7 @@ function createWindow() {
         slashes: true
     }));
 
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
     win.on('ready-to-show', () => {
         win.show();
@@ -39,7 +45,7 @@ app.on('ready', () => {
     createWindow();
 
     Menu.setApplicationMenu(null);
-    setMenuBar();
+    //setMenuBar();
 });
 
 function setMenuBar() {
