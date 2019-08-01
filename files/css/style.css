@@ -5,6 +5,11 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+    font-weight: 300;
+}
+
 .content {
     position: absolute;
     width: calc(100% - 40px);
@@ -18,10 +23,37 @@ html, body {
 
 .content h3 {
     margin-top: 0;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .bg-dark {
     background-color: #232323;
     color: #ccc;
+}
+
+.column-left {
+    float: left;
+    width: 40%;
+}
+
+.column-right {
+    float: left;
+    width: 60%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul {
+    color: #0084ff;
+    margin-top: 0;
+    padding-left: calc(2% - 10px);
+    list-style-type: none;
+}
+
+ul li {
+    padding-bottom: 5px;
 }
