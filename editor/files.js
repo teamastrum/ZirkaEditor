@@ -29,9 +29,14 @@ exports.saveFile = (filePath) => {
         return false;
     }
 
-    // Read the file at filePath
+    console.log(filePath);
+
+    // if (filePath == undefined) {
+    //     return false;
+    // }
+
     var file = fs.readFile(filePath, 'utf8', (err, contents) => {
-        if (err != null || err != undefined) { // If there's any errors, log em
+        if (err == null) {
             console.log(err);
             return false;
         } else {

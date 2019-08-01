@@ -5,18 +5,15 @@ require('electron-reload')(__dirname, {
     electron: require(`${__dirname}/node_modules/electron`)
 });
 
-// Create basic electron stuff
 const { app, BrowserWindow } = electron;
 const url = require('url');
 const path = require('path');
 const Menu = electron.Menu;
 
-// We need theese files
 const editor = require('./editor/editor');
 const files = require('./editor/files');
 
 function createWindow() {
-    // Creates window
     let win = new BrowserWindow({
         width: 1920,
         height: 1080,
@@ -26,44 +23,34 @@ function createWindow() {
         }
     });
 
-    // Set the url to the path of index.html (Start Page)
     win.loadURL(url.format({
         pathname: path.join(__dirname, '/files/html/index.html'),
         protocol: 'file:',
         slashes: true
     }));
 
-<<<<<<< HEAD
-    //win.webContents.openDevTools();
-=======
-    // Open Dev Tools 
+    
+    // Open Dev Tools
     win.webContents.openDevTools();
->>>>>>> 6270129294ecc7d1fb0ec6d30801e9573bcce3a4
 
     win.on('ready-to-show', () => {
-        // If is ready, show the app.
         win.show();
     });
 
     win.on('closed', () => {
-        // When closed, set win to null
         win = null;
     });
 
 }
 
 app.on('ready', () => {
-    // When ready, create window
     createWindow();
 
-    // Remove default menu bar
     Menu.setApplicationMenu(null);
-    // This will be removed once starting on the editor itself.
     setMenuBar();
 });
 
 function setMenuBar() {
-    // The menu bar of the editor.
     const template = [
         {
             label: 'File',
@@ -109,24 +96,19 @@ function setMenuBar() {
         }
     ];
 
-    // Set the new menu bar.
     const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
 
 }
 
 app.on('window-all-closed', () => {
-    // If all windows are closed and the current platform isn't darwin,
     if (process.platform !== 'darwin') {
-        // quit the app.
         app.quit();
     }
 });
 
 app.on('activate', () => {
-    // On actiavted,
-    if (win == null) { // /If win == null
-        // then create it.
+    if (win == null) {
         createWindow();
     }
 });
