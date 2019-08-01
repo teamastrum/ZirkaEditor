@@ -10,7 +10,7 @@ html, body {
     font-weight: 300;
 }
 
-.content {
+.startMenu.content {
     position: absolute;
     width: calc(100% - 40px);
     top: 20px;
@@ -21,7 +21,7 @@ html, body {
     padding: 0;
 }
 
-.content h3 {
+.startMenu.content h3 {
     margin-top: 0;
     font-weight: 500;
 }
@@ -31,12 +31,12 @@ html, body {
     color: #ccc;
 }
 
-.column-left {
+.startMenu.column-left {
     float: left;
     width: 40%;
 }
 
-.column-right {
+.startMenu.column-right {
     float: left;
     width: 60%;
 }
@@ -47,13 +47,105 @@ html, body {
     clear: both;
 }
 
-ul {
-    color: #0084ff;
+ul.startMenu {
     margin-top: 0;
     padding-left: calc(2% - 10px);
     list-style-type: none;
 }
 
-ul li {
+ul.startMenu li {
     padding-bottom: 5px;
+}
+
+.blue-text {
+    color: #0084ff;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Buttons */
+.btn {
+    border: 2px solid #bbbbbb;
+    background-color: #00000000;
+    font-size: 16px;
+    color: #ccc;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn-sm {
+    padding: 6px 20px;
+    border-radius: 20px;
+}
+
+.btn-md {
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+.btn-lg {
+    padding: 12px 40px;
+    border-radius: 80px;
+    font-size: 25px;
+}
+
+/* Green */
+.btn.success {
+    border-color: #4CAF50;
+    color: green;
+}
+
+.btn.success:hover {
+    background-color: rgb(18, 58, 19);
+}
+
+/* Blue */
+.btn.info {
+    border-color: #2196F3;
+    color: dodgerblue;
+}
+
+.btn.info:hover {
+    background: rgb(7, 42, 71);
+}
+
+/* Orange */
+.btn.warning {
+    border-color: #d88200;
+}
+
+.btn.warning:hover {
+    background: #553301;
+}
+
+/* Red */
+.btn.danger {
+    border-color: #f44336;
+}
+
+.btn.danger:hover {
+    background: #440f0b;
+}
+
+/* Gray */
+.btn.default {
+    border-color: #bbbbbb;
+}
+
+.btn.default:hover {
+    background: #313131;
+}
+
+input:focus, button { outline: 0; }
+
+input[type=text] {
+    border: 2px solid #bbbbbb;
+    background-color: #00000000;
+    font-size: 16px;
+    color: #ccc;
+    border-radius: 20px;
+    padding: 8px;
 }

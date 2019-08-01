@@ -12,6 +12,9 @@ const url = require('url');
 const path = require('path');
 const Menu = electron.Menu;
 
+// IPC
+var ipc = electron.ipcMain;
+
 // Required
 const editor = require('./editor/editor');
 const files = require('./editor/files');
@@ -47,8 +50,45 @@ function createWindow() {
     win.on('closed', () => {
         // Set it to null
         win = null;
+        win2 = null;
+        app.quit();
     });
 
+    // Create a new BrowserWindow
+    let win2 = new BrowserWindow({
+        width: 1280,
+        height: 720,
+        webPreferences: {
+            show: false,
+            nodeIntegration: true
+        }
+    });
+
+    // Load index.html (Start Page)
+    win2.loadURL(url.format({
+        pathname: path.join(__dirname, '/files/html/editor.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
+
+    // Open Dev Tools
+    //win2.webContents.openDevTools();
+
+    // If window is closed
+    win2.on('closed', () => {
+        // Set it to null
+        win = null;
+        win2 = null;
+        app.quit();
+    });
+
+    ipc.on('showEditor', () => {
+        win2.show();
+        win.hide();
+        setMenuBar();
+    });
+
+    win2.hide();
 }
 
 // If app is ready
@@ -60,7 +100,7 @@ app.on('ready', () => {
     Menu.setApplicationMenu(null);
     
     // To be removed when ctual editor added.
-    setMenuBar();
+    //setMenuBar();
 });
 
 function setMenuBar() {
