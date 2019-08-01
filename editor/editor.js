@@ -20,8 +20,7 @@ exports.editor = class {
 
     getCurrentlyOpenedFile() {
         // TODO: Add file implementation in editor (After editor GUI is done and file editor is completed.)
-        var file = new files.file('yes.txt', 'yes');
-        return file;
+        return this.currentFile;
     }
 
     updateFileData(file, data, value) {

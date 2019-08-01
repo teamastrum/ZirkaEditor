@@ -17,11 +17,11 @@ exports.file = class {
 
 exports.saveFile = (filePath) => {
     // If filePath is null (New File) the open save dialog.
-    if (filePath == null) {
+    if (filePath == null || filePath == undefined) {
         filePath = exports.saveAsFile();
     }
     var file = fs.existsSync(filePath); //Check if file exists?
-    
+
     /*
     * FOR FUTURE
         var file = fs.readFile(filePath, 'utf8', (err, contents) => {
