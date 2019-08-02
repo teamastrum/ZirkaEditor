@@ -155,3 +155,72 @@ input[type=text] {
     border-radius: 20px;
     padding: 8px;
 }
+
+.live-gradient-bg {
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: GradientBg 15s ease infinite;
+	-moz-animation: GradientBg 15s ease infinite;
+	animation: GradientBg 15s ease infinite;
+}
+
+@-webkit-keyframes GradientBg {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes GradientBg {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes GradientBg {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.test-div {
+    width: 600px;
+    height: 300px;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-info {
+    color: dodgerblue;
+}
+
+.text-warning {
+    color: #d88200;
+}
+
+.text-danger {
+    color: #f44336;
+}
+
+.text-white {
+    color: #bbbbbb;
+}
