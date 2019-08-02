@@ -9,6 +9,7 @@
   <base href="./../../">
   <link rel="stylesheet" href="files/css/style.css">
   <link rel="stylesheet" href="files/css/checkbox.css">
+  <link rel="stylesheet" href="files/css/radio.css">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 </head>
@@ -26,13 +27,63 @@
 
   <input type="text" name="" id="">
 
-  <input type="checkbox" class="css-checkbox" name="" id="chk1">
-  <label for="chk1" class="css-label">Option 1</label></td><td></td>
-  <input type="checkbox" class="css-checkbox" name="" id="chk2">
-  <label for="chk2" class="css-label">Option 2</label></td><td></td>
-
   <div class="test-div live-gradient-bg"></div>
 
-  <script>require('./files/js/editor.js');</script>
+  <div class="control-radio-group">
+    <label class="control-ratio control-ratio-radio">
+        First radio
+        <input type="radio" name="radio" checked="checked" />
+        <div class="control-ratio_indicator"></div>
+    </label>
+    <label class="control-ratio control-ratio-radio">
+        Second radio
+        <input type="radio" name="radio" />
+        <div class="control-ratio_indicator"></div>
+    </label>
+    <label class="control-ratio control-ratio-radio">
+        Disabled
+        <input type="radio" name="radio2" disabled="disabled" />
+        <div class="control-ratio_indicator"></div>
+    </label>
+    <label class="control-ratio control-ratio-radio">
+        Disabled & checked
+        <input type="radio" name="radio2" disabled="disabled" checked="checked" />
+        <div class="control-ratio_indicator"></div>
+    </label>
+  </div>
+
+  <div class="control-cbx-group">
+      <label class="control-cbx control-cbx-checkbox">
+          First checkbox
+          <input type="checkbox" checked="checked" />
+          <div class="control-cbx_indicator"></div>
+      </label>
+      <label class="control-cbx control-cbx-checkbox">
+          Second checkbox
+          <input type="checkbox" />
+          <div class="control-cbx_indicator"></div>
+      </label>
+      <label class="control-cbx control-cbx-checkbox">
+          Third checkbox
+          <input type="checkbox" />
+          <div class="control-cbx_indicator"></div>
+      </label>
+      <label class="control-cbx control-cbx-checkbox">
+          Disabled
+          <input type="checkbox" disabled="disabled" />
+          <div class="control-cbx_indicator"></div>
+      </label>
+      <label class="control-cbx control-cbx-checkbox">
+          Disabled & checked
+          <input type="checkbox" disabled="disabled" checked="checked" />
+          <div class="control-cbx_indicator"></div>
+      </label>
+  </div>
+
+  <div class="range">
+    <input type="range" min="0" max="40">
+  </div>
+
+  <script>require('./../js/editor.js');</script>
 </body>
 </html>

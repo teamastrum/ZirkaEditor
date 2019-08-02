@@ -72,7 +72,7 @@ function createWindow() {
     }));
 
     // Open Dev Tools
-    // win2.webContents.openDevTools();
+    win2.webContents.openDevTools();
 
     win2.on('show', () => {
         win2.maximize();

@@ -1,0 +1,66 @@
+.control-ratio {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.control-ratio input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.control-ratio_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    transition: all 0.2s ease-in-out;
+    border: 0px solid #000000;
+}
+.control-ratio-radio .control-ratio_indicator {
+    border-radius: 50%;
+}
+
+.control-ratio:hover input ~ .control-ratio_indicator,
+.control-ratio input:focus ~ .control-ratio_indicator {
+    background: #cccccc;
+}
+
+.control-ratio input:checked ~ .control-ratio_indicator {
+    background: #e25a00;
+}
+.control-ratio:hover input:not([disabled]):checked ~ .control-ratio_indicator,
+.control-ratio input:checked:focus ~ .control-ratio_indicator {
+    background: #e25a00;
+}
+.control-ratio input:disabled ~ .control-ratio_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control-ratio_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control-ratio input:checked ~ .control-ratio_indicator:after {
+    display: block;
+}
+.control-ratio-radio .control-ratio_indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.control-ratio-radio input:disabled ~ .control-ratio_indicator:after {
+    background: #7b7b7b;
+}
