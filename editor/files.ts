@@ -1,10 +1,13 @@
-const fs = require('fs');
-const editor = require('./editor.js');
-const { dialog, app } = require('electron');
+import * as fs from 'fs';
+import * as editor from './editor.js';
+import { dialog, app } from 'electron';
 
 // File class. VERY IMPORTANT!!!! LEAVE SLENDI WORK ON IT!!!!
-exports.file = class {
-    constructor (filePath) {
+export class file {
+    filePath: string;
+    data: string;
+
+    constructor (filePath: string) {
         this.filePath = filePath;
         this.data = 'data';
         //this.info = fs.statSync(filePath); // TIS SHIT GAVE ME A LOT OF PAIN
@@ -15,7 +18,7 @@ exports.file = class {
     }
 }
 
-exports.saveFile = (filePath) => {
+export function saveFile (filePath: string) {
     // Check if file is undefined/Save As dialog closed
     if (filePath == undefined) {
         return false;
@@ -25,7 +28,7 @@ exports.saveFile = (filePath) => {
 
     // FOR FUTURE
     // // Read the file at filePath
-    // var file = fs.readFile(filePath, 'utf8', (err, contents) => {
+    // var file = fs.readFile(filePath, 'utf8', (err, contents) {
     //     if (err != null || err != undefined) { // If there's any errors, log em
     //         console.log(err);
     //         return false;
@@ -54,7 +57,7 @@ exports.saveFile = (filePath) => {
     return true;
 }
 
-exports.saveAsFile = () => {
+export function saveAsFile () {
     // Set the options for the save file dialog
     const options = {
         defaultPath: require('os').homedir(),
@@ -81,9 +84,9 @@ exports.saveAsFile = () => {
     
 };
 
-exports.checkFType = (filePath) => {
+export function checkFType (filePath: string) {
     // Create a empty string variable
-    var fileExtension = ''
+    var fileExtension: string;
     try {
         // Try to get the file extension
         fileExtension = filePath.split('/')[-1].split('.')[-1];
@@ -102,6 +105,6 @@ exports.checkFType = (filePath) => {
     }
 }
 
-exports.open = () => {
+export function open () {
     // TODO: Add implementation
 }
