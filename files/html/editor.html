@@ -84,6 +84,14 @@
     <input type="range" min="0" max="40">
   </div>
 
+  <pre id="editor" class="ace_editor ace-twilight-ace-dark"></pre>
+  <script src="files/ace-src-min/ace.js"></script>
+  <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+  </script>
+
   <script>require('./../js/editor.js');</script>
 </body>
 </html>

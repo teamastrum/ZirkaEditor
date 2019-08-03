@@ -317,4 +317,10 @@ input[type="range"]::-moz-range-track {
 input[type="range"]:hover::-moz-range-track {
     background: #ff6e40;
 }
-  
+
+#editor {
+    margin: 0;
+    position: relative;
+    height: 30%;
+    width: 60%;
+}
