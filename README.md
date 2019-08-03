@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pravumgames/ZirkaEditor.svg?branch=master)](https://travis-ci.org/pravumgames/ZirkaEditor)
+
 # Zirka Editor
 This is the official Kirka Editor.
 # Getting Started
