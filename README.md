@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pravumgames/ZirkaEditor.svg?branch=master)](https://travis-ci.org/pravumgames/ZirkaEditor) [Language](https://img.shields.io/badge/Language-JS%20%26%20TS-success) [Github Issues](https://img.shields.io/github/issues/pravumgames/ZirkaEditor) [Github Forks](https://img.shields.io/github/forks/pravumgames/ZirkaEditor) [Github Stars](https://img.shields.io/github/stars/pravumgames/ZirkaEditor) [Github License](https://img.shields.io/github/license/pravumgames/ZirkaEditor)
+[![Build Status](https://travis-ci.org/pravumgames/ZirkaEditor.svg?branch=master)](https://travis-ci.org/pravumgames/ZirkaEditor) ![Language](https://img.shields.io/badge/Language-JS%20%26%20TS-success) ![Github Issues](https://img.shields.io/github/issues/pravumgames/ZirkaEditor) ![Github Forks](https://img.shields.io/github/forks/pravumgames/ZirkaEditor) ![Github Stars](https://img.shields.io/github/stars/pravumgames/ZirkaEditor) ![Github License](https://img.shields.io/github/license/pravumgames/ZirkaEditor)
 
 # Zirka Editor
 This is the official Kirka Editor.
