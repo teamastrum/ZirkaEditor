@@ -84,12 +84,21 @@
     <input type="range" min="0" max="40">
   </div>
 
-  <pre id="editor" class="ace_editor ace-twilight-ace-dark"></pre>
+  <div contenteditable="true" spellcheck="true" id="editor" class="ace_editor ace-twilight-ace-dark"></div>
   <script src="files/ace-src-min/ace.js"></script>
+  <script src="files/ace-src-min/ext-language_tools.js"></script>
+  <script src="files/ace-src-min/ext-spellcheck.js"></script>
   <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
     editor.session.setMode("ace/mode/javascript");
+
+    editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableSnippets: true,
+      enableLiveAutocompletion: true,
+      spellcheck: true
+    });
   </script>
 
   <script>require('./../js/editor.js');</script>
