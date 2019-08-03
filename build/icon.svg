@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256px"
+   height="256px"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="icon.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="47.386652"
+     inkscape:cy="139.99661"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true" />
+  <defs
+     id="defs3721" />
+  <metadata
+     id="metadata3724">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       id="rect3739-1"
+       width="24.5"
+       height="100.5"
+       x="174.77975"
+       y="-41.411175"
+       transform="rotate(45)"
+       style="fill:#0000ff" />
+    <rect
+       id="rect3739-2"
+       width="24.5"
+       height="100.5"
+       x="238.77292"
+       y="-43.17894"
+       transform="rotate(45)"
+       style="fill:#0000ff" />
+    <rect
+       id="rect3737"
+       width="24"
+       height="213"
+       x="38"
+       y="24"
+       style="fill:#000080" />
+    <rect
+       id="rect3739"
+       width="24.5"
+       height="129"
+       x="-133.69559"
+       y="-53.363052"
+       transform="rotate(-135)"
+       style="stroke-width:1.13295281;fill:#000080" />
+    <rect
+       id="rect3739-5"
+       width="24.5"
+       height="141"
+       x="-69.341881"
+       y="122.45384"
+       transform="rotate(-45)"
+       style="stroke-width:1.18447673;fill:#000080" />
+  </g>
+</svg>

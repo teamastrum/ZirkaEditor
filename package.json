@@ -1,5 +1,6 @@
 {
   "name": "zirka-editor",
+  "productName": "Zirka Editor",
   "version": "1.0.0",
   "description": "The Official Zirka Engine Text Editor",
   "main": "main.js",
@@ -24,8 +25,5 @@
   "devDependencies": {
     "electron": "^6.0.0"
   },
-  "dependencies": {
-    "electron-reload": "^1.4.1",
-    "ipc": "0.0.1"
-  }
+  "dependencies": {}
 }

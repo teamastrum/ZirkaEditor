@@ -24,6 +24,7 @@ function createWindow() {
     let win = new BrowserWindow({
         width: 500,
         height: 300,
+        icon: './build/icon.png',
         webPreferences: {
             show: false,
             nodeIntegration: true
@@ -58,6 +59,7 @@ function createWindow() {
     let win2 = new BrowserWindow({
         width: 1280,
         height: 720,
+        icon: './build/icon.png',
         webPreferences: {
             show: false,
             nodeIntegration: true
