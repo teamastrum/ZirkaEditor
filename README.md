@@ -12,6 +12,9 @@ These instructions will get you a copy of the project up and running on your loc
 * TypeScript (Install it via `npm i -g typescript`)
 * Electron (Install it cia `npm i --only=dev electron`)
 * Electron Reload - This is for live reloading. (Install it via `npm i electron-reload`)
+* Babylion.js (Install it via `npm install --save babylonjs`)
+* Babylion.js GUI (Install it via `npm install --save babylonjs-gui`)
+* Babylion.js Materials (Install it via `npm install --save babylonjs-materials`)
 
 ## Running
 To run the Kirka Editor, simply run `npm start`. This will just execute `electron .`

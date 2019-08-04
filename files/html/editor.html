@@ -84,10 +84,15 @@
     <input type="range" min="0" max="40">
   </div>
 
+  w-position e-rotation r-scale q-box y-hide_gizmo a-toggle_local_/_global_gizmo s-toggle_snapping d-gizmo_size 9to=(cam speed)
+  <canvas id="renderCanvas" touch-action="none" style="touch-action: none;" width="1000" height="700" tabindex="1"></canvas>
+
   <div contenteditable="true" spellcheck="true" id="editor" class="ace_editor ace-twilight-ace-dark"></div>
   <script src="files/ace-src-min/ace.js"></script>
   <script src="files/ace-src-min/ext-language_tools.js"></script>
   <script src="files/ace-src-min/ext-spellcheck.js"></script>
+  <script src="files/js/sceneeditor.js"></script>
+  <script src="files/js/editor.js"></script>
   <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
