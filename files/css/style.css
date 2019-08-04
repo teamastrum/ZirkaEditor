@@ -54,7 +54,16 @@ ul.startMenu {
 }
 
 ul.startMenu li {
-    padding-bottom: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.li_start_menu_item {
+    text-decoration: none;
+}
+
+.li_start_menu_item:hover {
+    text-decoration: underline;
 }
 
 .blue-text {
