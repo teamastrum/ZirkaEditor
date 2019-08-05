@@ -4,3 +4,9 @@ window.addEventListener("keydown", function(e) {
         e.preventDefault();
     }
 }, false);
+
+function setImage(imgTag, path) { // Why the imgTag? When we add multiple tabs, 
+    // we could have multiple <img> tags. We could use jQuery OR get all elements 
+    // by a class and loop trough them.
+    imgTag.src = 'file://' + path;
+}

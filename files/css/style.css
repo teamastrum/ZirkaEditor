@@ -330,6 +330,6 @@ input[type="range"]:hover::-moz-range-track {
 #editor {
     margin: 0;
     position: relative;
-    height: 30%;
-    width: 60%;
+    height: 30%; /* When added costumizable UI, fix this. */
+    width: 60%; /* When added costumizable UI, fix this. */
 }

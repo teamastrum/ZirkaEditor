@@ -146,6 +146,18 @@ var createScene = function () {
     wood.albedoColor = BABYLON.Color3.White();
     wood.albedoTexture = new BABYLON.Texture("./files/img/textures/albedo.png", scene);
     woodPlank.material = wood;
+
+    // Motion Blur
+    var motionblur = new BABYLON.MotionBlurPostProcess(
+        "mb", // The name of the effect.
+        scene, // The scene containing the objects to blur according to their velocity.
+        1.0, // The required width/height ratio to downsize to before computing the render pass.
+        camera // The camera to apply the render pass to.
+    );
+
+    motionblur.motionStrength = 5;
+    motionblur.motionBlurSamples = 64;
+
     return scene;
 };
 
