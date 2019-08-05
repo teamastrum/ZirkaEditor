@@ -41,7 +41,7 @@ export function saveFile (filePath: string) {
     if (file != false) {
         try {
             // Write to the file the new data
-            fs.writeFileSync(filePath, editor.getCurrentlyOpenedFile().data);
+            fs.writeFileSync(filePath, editor.getCurrentProject().getCurrentlyOpenedFile().data);
         } catch (err) {
             // If an error occurs, tell the user
             editor.showError('Couldn\'t save file. (File write error)');

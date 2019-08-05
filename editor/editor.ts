@@ -132,23 +132,6 @@ export function getCurrentProject(): Project {
     return new Project('',''); // HEPLP
 }
 
-export function getAllOpenedFiles () {
-    // Gets all currently opened files.
-    // TODO: Add implementation
-    return [];
-}
-
-export function getAllProjectFiles (project: Project) {
-    // TODO: Add implementation
-    return [];
-}
-
-export function getCurrentlyOpenedFile (): files.file {
-    // TODO: Add file implementation in editor (After editor GUI is done and file editor is completed.)
-    var file = new files.file('./yes.txt');
-    return file;
-}
-
 export function updateFileData (file, data, value): boolean {
     // Update file data (GUI).
     // TODO: Add implementation.
@@ -157,7 +140,7 @@ export function updateFileData (file, data, value): boolean {
 export function updateCurrentFileData (data: string, value: any): boolean {
     // Go to files.js for refrence.
     // This will update the GUI of the editor in the current file.
-    updateFileData(getCurrentlyOpenedFile(), data, value);
+    updateFileData(getCurrentProject().getCurrentlyOpenedFile(), data, value);
     return true;
 }
 
