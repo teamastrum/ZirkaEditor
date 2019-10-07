@@ -1,7 +1,6 @@
 import { dialog } from "electron";
 import * as files from "./files";
 import * as fs from 'fs';
-import { Image } from "babylonjs-gui";
 
 export class Project {
     private projectFiles:string[];
@@ -18,12 +17,12 @@ export class Project {
     private currentFile = null;
 
     private folderPath:string;
-    private thumbnail:Image;
+    private thumbnail;
 
     constructor(folderPath: string, thumbnailPath: string) {
         this.folderPath = folderPath;
         try {
-            this.thumbnail = new Image('Thumbnail', 'file://'+folderPath+'/.thumbnail.png');
+            // this.thumbnail = new Image('Thumbnail', 'file://'+folderPath+'/.thumbnail.png');
         } catch(e) {
             showError('An error occured while opening the thumbnail for project "' + folderPath.split('/')[-1].split('\\')[-1] + '"! (thumbnail.png)');
             console.error(e);

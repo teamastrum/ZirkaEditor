@@ -55,6 +55,8 @@ function createWindow() {
         app.quit();
     });
 
+    // win.webContents.openDevTools();
+
     // Create a new BrowserWindow
     let win2 = new BrowserWindow({
         width: 1280,
@@ -63,7 +65,8 @@ function createWindow() {
         webPreferences: {
             show: false,
             nodeIntegration: true
-        }
+        },
+        show: false
     });
 
     // Load index.html (Start Page)
@@ -94,7 +97,6 @@ function createWindow() {
         setMenuBar();
     });
 
-    win2.hide();
 }
 
 // If app is ready
